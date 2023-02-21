@@ -12,6 +12,7 @@ import Detalle from "./Detalle";
 // componentes puedan consumir un estado global.
 
 const Formulario = () => {
+  
   return (
     <>
       <header className="form-header">
@@ -40,16 +41,19 @@ const Formulario = () => {
                 <img src={entrenador} alt="entrenador" />
                 <span>ENTRENADOR</span>
               </p>
-              <Input name="nombre" label="Nombre" />
-              <Input name="apellido" label="Apellido" />
-              <Input name="email" label="Email" type="email" />
+              <Input dataType='entrenador' name="nombre" label="Nombre" />
+              <Input dataType='entrenador'  name="apellido" label="Apellido" />
+              <Input dataType='entrenador'  name="email" label="Email" type="email" />
             </div>
             <div>
               <p className="nombre-seccion">
                 <img src={pikachu} alt="pikachu" />
                 <span>POKEMON</span>
               </p>
-              <Input name="nombrePokemon" label="Nombre" />
+              <Input dataType='pokemon' name="nombrePokemon" label="Nombre" />
+              <Input dataType='pokemon' name="alturaPokemon" label="altura" />
+              <Input dataType='pokemon' name="tipoPokemon" label="tipo" />
+              <Input dataType='pokemon' name="edadPokemon" label="edad" />
             </div>
           </div>
           <Detalle />

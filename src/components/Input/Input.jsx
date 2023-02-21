@@ -1,31 +1,38 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { InputContext } from "../../context/ContextoFormulario";
 
-const Input = ({ name, label, type = "text" }) => {
-  // Aqui deberíamos acceder al estado global para poder obtener los datos
-  // del formulario y una manera de actualizar los mismos.
+const Input = ({ name, label, type = "text", dataType }) => {
+  const {inputInfo, setInputInfo}  = useContext(InputContext)
+  const [store, dispatch]  = useContext(InputContext)
+  const [inputLocal, setInputLocal] = useState('')
 
-  // También, utilizaremos un estado local para manejar el estado del input.
-
-  const onChange = (e) => {
+  const onChange = (e) => {   
+    setInputLocal(e.target.value)
     // Aquí deberíamos actualizar el estado local del input.
   };
-
+  
+  
   const onBlur = (e) => {
-    e.preventDefault();
-
-    // Aqui deberíamos actualizar el estado global con los datos de
-    // cada input.
-    // TIP: Podemos utilizar el nombre de cada input para guardar
-    // los datos en el estado global usando una notación de { clave: valor }
+   // e.preventDefault();
+   // setInputInfo({...inputInfo, [name]:inputLocal}) 
+   dispatch({
+      type:dataType, 
+      payload:{[e.target.name]:e.target.value}})
+   
   };
+
+  
 
   return (
     <div className="input-contenedor">
       <label htmlFor={name}>{label}</label>
       <input
         type={type}
-        value={"Siempre tengo el mismo valor XD"}
-        id={name}
+        //value={"Siempre tengo el mismo valor XD"}
+        value = {inputLocal}
+        placeholder= 'Siempre tengo el mismo valor XD'
+        name={name}
+        datatype = {dataType}      
         onChange={onChange}
         onBlur={onBlur}
       />
