@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { InputContext } from "../../context/ContextoFormulario";
+/***Importar PropTypes */
+import PropTypes from 'prop-types';
 
 const Input = ({ name, label, type = "text", dataType }) => {
   const {inputInfo, setInputInfo}  = useContext(InputContext)
@@ -41,3 +43,13 @@ const Input = ({ name, label, type = "text", dataType }) => {
 };
 
 export default Input;
+
+
+/***** definir los valor que son requeridos*/
+Input.propTypes = {
+  name: PropTypes.oneOfType([
+    PropTypes.string   
+  ]).isRequired,
+  label : PropTypes.string.isRequired,
+  dataType: PropTypes.string
+}  
