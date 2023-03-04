@@ -1,12 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
+import { useMutation, useQueryClient } from "react-query";
 import { InputContext } from "../../context/ContextoFormulario";
+import { createPokemon } from "../Api/createPokemon";
 
 const Detalle = () => {
-  // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
-  // la vista previa.
+
+  const queryClient = useQueryClient();
   const {inputInfo, setInputInfo} = useContext(InputContext)
   const [store, dispatch]  = useContext(InputContext)
- 
+  const formRef = useRef(null)
+  const { mutate, isLoading, isSuccess, data, reset } = useMutation(createPokemon, {
+    onSuccess: (pokemon) => {
+        queryClient.setQueriesData('pokemons', prevPost => prevPost.concat(pokemon))
+        queryClient.invalidateQueries('pokemons')
+    }
+})
+  const handleClick = (() =>{
+    // alert("Solicitud enviada :)")
+    mutate(store)
+    
+  })
+
   return (
     <div className="detalle-formulario">
       <div className="encabezado">
@@ -29,11 +43,20 @@ const Detalle = () => {
           <p>Edad:{store.pokemon?.edadPokemon}</p>
         </div>
       </section>
-      <button
-        className="boton-enviar"
-        onClick={() => alert("Solicitud enviada :)")}
+      
+      {isSuccess&&
+        <p>Se creo el pokemon con id:{data.id}</p>
+      }
+      <button 
+        disabled={isSuccess}
+        className={!isSuccess ?"boton-enviar" :"boton-enviar-disable" }
+        // onClick={() => alert("Solicitud enviada :)")}
+        onClick={handleClick}
       >
-        Enviar Solicitud
+        {isLoading? 
+      "Creando...": isSuccess? "Enviado":
+        "Enviar Solicitud"
+      }
       </button>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useReducer, useState } from "react"
 
-export const InputContext = createContext()
+export const InputContext = createContext('')
 
 const initialState = {
     entrenador:null,
@@ -28,10 +28,12 @@ const formReducer = (state, action ) =>{
     }
 }
 
+
 export const InputProvider = ({children})=>{
     //const [inputInfo, setInputInfo] = useState({})
     const [store, dispatch] = useReducer(formReducer, initialState)    
-
+    console.log(initialState);
+    console.log({store});
     return (
     //    <InputContext.Provider value={{inputInfo, setInputInfo} }>
        <InputContext.Provider value={ [store, dispatch] }>      

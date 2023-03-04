@@ -111,10 +111,18 @@ h1 {
   margin-left: 1rem;
 }
 
+.input-contenedor select {
+  padding: 1rem;
+  width: 330px;
+  border-radius: 10px;
+  border-style: solid; 
+  margin-left: 1rem;
+}
+
 .formulario-ingreso .cuerpo-formulario {
   display: flex;
   flex-direction: row;
-  height: 90%;
+  /* height: 90%; */
 }
 
 .formulario-ingreso h3 {
@@ -125,9 +133,10 @@ h1 {
 .detalle-formulario {
   width: 70%;
   border: 1px solid darkgray;
-  margin: 0 3rem;
+  margin: 3rem;
   border-radius: 6px;
   box-shadow: 5px 5px lightgray;
+  
 }
 
 .detalle-formulario .encabezado {
@@ -141,6 +150,7 @@ h1 {
   width: 40%;
   margin-left: 2rem;
 }
+
 
 .nombre-seccion {
   text-align: left;
@@ -170,6 +180,19 @@ h1 {
   padding: 0.6rem 3rem;
   border-radius: 10px;
   background-color: #ed5564;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Pokemon", sans-serif;
+  border: none;
+  box-shadow: 4px 4px 4px lightgray;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+}
+
+.boton-enviar-disable {
+  padding: 0.6rem 3rem;
+  border-radius: 10px;
+  background-color: #8a8888;
   color: whitesmoke;
   font-weight: bold;
   font-family: "Pokemon", sans-serif;

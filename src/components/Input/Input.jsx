@@ -1,12 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { InputContext } from "../../context/ContextoFormulario";
 /***Importar PropTypes */
 import PropTypes from 'prop-types';
 
 const Input = ({ name, label, type = "text", dataType }) => {
-  const {inputInfo, setInputInfo}  = useContext(InputContext)
+  // const {inputInfo, setInputInfo}  = useContext(InputContext)
   const [store, dispatch]  = useContext(InputContext)
   const [inputLocal, setInputLocal] = useState('')
+  const refInput = useRef(null)
 
   const onChange = (e) => {   
     setInputLocal(e.target.value)
@@ -20,7 +21,7 @@ const Input = ({ name, label, type = "text", dataType }) => {
    dispatch({
       type:dataType, 
       payload:{[e.target.name]:e.target.value}})
-   
+      refInput.current.reset()
   };
 
   
@@ -29,6 +30,7 @@ const Input = ({ name, label, type = "text", dataType }) => {
     <div className="input-contenedor">
       <label htmlFor={name}>{label}</label>
       <input
+        ref={refInput}
         type={type}
         //value={"Siempre tengo el mismo valor XD"}
         value = {inputLocal}
