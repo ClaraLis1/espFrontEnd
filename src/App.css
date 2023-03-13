@@ -119,6 +119,19 @@ h1 {
   margin-left: 1rem;
 }
 
+.boton-seleccionar-especies {
+  padding: 1rem;
+  width: 300px;
+  border-radius: 10px;
+  border-style: solid;
+  margin-left: 1rem;
+}
+
+.input-contenedor select,
+.boton-seleccionar-especies {
+  width: 338px;
+}
+
 .formulario-ingreso .cuerpo-formulario {
   display: flex;
   flex-direction: row;
@@ -231,4 +244,38 @@ h1 {
 
 .volver {
   justify-self: end;
+}
+
+
+.boton-anterior,
+.boton-siguiente {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: #ed5564;
+  cursor: pointer;
+  border: 2px solid #ed5564;
+  box-shadow: 2px 2px 2px 2px darkgray;
+}
+
+.boton-anterior:hover,
+.boton-siguiente:hover {
+  background-color: #ed5564;
+  color: whitesmoke;
+  box-shadow: none;
+}
+
+.boton-anterior {
+  margin-right: 1rem;
+}
+
+
+.boton-anterior:disabled,
+.boton-siguiente:disabled{
+  background-color: #e9bfc3;
+  cursor: default;
+  color: #8a8888;
+  border: 2px solid #8a8888;
+  box-shadow: none
 }

@@ -6,3 +6,4 @@ export const createPokemon = async (pokemon) => {
     const { data } = await axios.post(`${API}/pokemon`, pokemon);
     return data;
 };
+

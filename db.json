@@ -229,6 +229,300 @@
         "edadPokemon": "ads"
       },
       "id": 23
+    },
+    {
+      "entrenador": {
+        "nombre": "Lazaro",
+        "apellido": "Ramirez",
+        "email": "lisleclara1@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "alturaPokemon": "5",
+        "tipoPokemon": "normal",
+        "edadPokemon": "5"
+      },
+      "id": 24
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "tipoPokemon": "fairy",
+        "especiePokemon": "",
+        "edadPokemon": ""
+      },
+      "id": 25
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "nombrePokemon": "ivi",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "shadow",
+        "especiePokemon": "ivysaur",
+        "edadPokemon": "25"
+      },
+      "id": 26
+    },
+    {
+      "entrenador": null,
+      "pokemon": null,
+      "id": 27
+    },
+    {
+      "entrenador": {
+        "nombre": "Lazaro",
+        "apellido": "Ramirez",
+        "email": "lisleclara1@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "hola",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "dark",
+        "especiePokemon": "ivysaur",
+        "edadPokemon": "5"
+      },
+      "id": 28
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "especiePokemon": "pikachu",
+        "edadPokemon": "5"
+      },
+      "id": 29
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "unknown",
+        "especiePokemon": "charmander",
+        "edadPokemon": "asd"
+      },
+      "id": 30
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "fairy",
+        "especiePokemon": "venusaur",
+        "edadPokemon": "ads"
+      },
+      "id": 31
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "ads"
+      },
+      "pokemon": null,
+      "id": 32
+    },
+    {
+      "entrenador": null,
+      "pokemon": null,
+      "id": 33
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "ads",
+        "email": "ads"
+      },
+      "pokemon": null,
+      "id": 34
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd"
+      },
+      "id": 35
+    },
+    {
+      "entrenador": null,
+      "pokemon": null,
+      "id": 36
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "unknown",
+        "especiePokemon": "bulbasaur",
+        "edadPokemon": "asd"
+      },
+      "id": 37
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "unknown",
+        "especiePokemon": "bulbasaur"
+      },
+      "id": 38
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "fairy",
+        "especiePokemon": "bulbasaur",
+        "edadPokemon": "asd"
+      },
+      "state": {
+        "entrenador": null,
+        "pokemon": null
+      },
+      "id": 39
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "ads"
+      },
+      "pokemon": null,
+      "id": 40
+    },
+    {
+      "entrenador": {
+        "nombre": "ads",
+        "apellido": "ads"
+      },
+      "pokemon": null,
+      "id": 41
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "ads"
+      },
+      "pokemon": null,
+      "id": 42
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd"
+      },
+      "pokemon": null,
+      "id": 43
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "dark"
+      },
+      "id": 44
+    },
+    {
+      "entrenador": null,
+      "pokemon": null,
+      "id": 45
+    },
+    {
+      "entrenador": null,
+      "pokemon": null,
+      "id": 46
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "unknown",
+        "especiePokemon": "ivysaur",
+        "edadPokemon": "asd"
+      },
+      "id": 47
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "ads",
+        "alturaPokemon": "asd",
+        "tipoPokemon": "normal",
+        "edadPokemon": "adssad",
+        "especiePokemon": "weedle"
+      },
+      "id": 48
+    },
+    {
+      "entrenador": {
+        "nombre": "asd",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asdads",
+        "tipoPokemon": "normal",
+        "especiePokemon": "venusaur",
+        "edadPokemon": "25"
+      },
+      "id": 49
+    },
+    {
+      "entrenador": {
+        "nombre": "ads",
+        "apellido": "asd",
+        "email": "asd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asd",
+        "alturaPokemon": "asd",
+        "edadPokemon": "ads"
+      },
+      "id": 50
+    },
+    {
+      "entrenador": null,
+      "pokemon": {
+        "tipoPokemon": "fairy",
+        "especiePokemon": "ivysaur"
+      },
+      "id": 51
     }
   ]
 }

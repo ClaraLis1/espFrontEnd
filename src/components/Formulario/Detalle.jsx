@@ -1,14 +1,20 @@
+// @ts-nocheck
 import React, { useContext, useRef } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { InputContext } from "../../context/ContextoFormulario";
 import { createPokemon } from "../Api/createPokemon";
 
+
 const Detalle = () => {
 
   const queryClient = useQueryClient();
+  /**
+   * @type {string} inputInfo
+   */
   const {inputInfo, setInputInfo} = useContext(InputContext)
   const [store, dispatch]  = useContext(InputContext)
   const formRef = useRef(null)
+  
   const { mutate, isLoading, isSuccess, data, reset } = useMutation(createPokemon, {
     onSuccess: (pokemon) => {
         queryClient.setQueriesData('pokemons', prevPost => prevPost.concat(pokemon))
@@ -18,7 +24,12 @@ const Detalle = () => {
   const handleClick = (() =>{
     // alert("Solicitud enviada :)")
     mutate(store)
+    dispatch({type:'SEND', payload:{
+    entrenador:null,
+    pokemon:null
+   }})
     
+
   })
 
   return (
@@ -38,9 +49,10 @@ const Detalle = () => {
         <h4>Datos del Pokémon</h4>
         <div className="fila">
           <p>Nombre:{store.pokemon?.nombrePokemon}</p>
-          <p>Altura:{store.pokemon?.alturaPokemon}</p>
           <p>Tipo:{store.pokemon?.tipoPokemon}</p>
+          <p>Altura:{store.pokemon?.alturaPokemon}</p>
           <p>Edad:{store.pokemon?.edadPokemon}</p>
+          <p>Especie:{store.pokemon?.especiePokemon}</p>
         </div>
       </section>
       

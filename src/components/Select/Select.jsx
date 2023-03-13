@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import propTypes from "prop-types";
 import { useQuery } from 'react-query'
 import { InputContext } from '../../context/ContextoFormulario'
 import { getPokemon } from '../Api/getPokemon'
@@ -10,17 +11,19 @@ export const Select = ({name, label, type = "text", dataType} ) => {
     const [selectedLocal, setSelectedLocal] = useState('')   
     const options =  data?.results
 
+    
        
       const onBlur = (e) => {
         // e.preventDefault();
         // setInputInfo({...inputInfo, [name]:inputLocal}) 
+        // @ts-ignore
         dispatch({
-            type:dataType, 
-            payload:{[e.target.name]:e.target.value}})
-            
+            type:"ACTUALIZAR_POKEMON", 
+            payload:{[e.target.name]:e.target.value}})           
             
        };
-     
+    
+       console.log(name);
        console.log(selectedLocal);
     
   return (
@@ -31,13 +34,21 @@ export const Select = ({name, label, type = "text", dataType} ) => {
             name={name}
             datatype={dataType}   
             onChange={e => setSelectedLocal(e.target.value)} 
-            onBlur={onBlur}
-         >
-            {!isLoading && options.map((option, index) => (
+            onBlur={onBlur}>
+            {!isLoading && name=="tipoPokemon" && options.map((option, index) => (
               <option key={index} value={option.name}>{option.name}</option>
             ))}
+          
           </select>
     </div>
   )
 }
+
+Select.propTypes = {
+    name: propTypes.string.isRequired,
+    label: propTypes.string.isRequired,
+    options: propTypes.array,
+   
+  };
+  
 

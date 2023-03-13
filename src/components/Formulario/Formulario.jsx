@@ -6,6 +6,7 @@ import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
 import { Select } from "../Select/Select";
+import InputEspecie from "../InputEspecie/InputEspecie";
 
 // En este componente tenemos nuestro formulario y dentro de él
 // tenemos los componentes que necesitan consumir nuestro estado.
@@ -55,6 +56,7 @@ const Formulario = () => {
               <Input dataType='pokemon' name="alturaPokemon" label="altura" />
               {/* <Input dataType='pokemon' name="tipoPokemon" label="tipo" /> */}
               <Select dataType='pokemon'  name="tipoPokemon" label="tipo"/>
+              <InputEspecie dataType='pokemon'  name="especiePokemon" label="especie"/>
               <Input dataType='pokemon' name="edadPokemon" label="edad" />
             </div>
           </div>
